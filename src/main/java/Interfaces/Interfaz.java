@@ -44,7 +44,7 @@ public class Interfaz extends javax.swing.JFrame {
         return IconST;
     }
 
-    public static void setIconST(JLabel Character_Icon_Nick) {
+    public static void setIconST(JLabel IconST) {
         Interfaz.IconST = IconST;
     }
 
@@ -58,16 +58,16 @@ public class Interfaz extends javax.swing.JFrame {
         return marcadorSW;
     }
 
-    public static void setMarcadorSW(JLabel marcadorCartoon) {
-        Interfaz.marcadorSW = marcadorCartoon;
+    public static void setMarcadorSW(JLabel marcadorSW) {
+        Interfaz.marcadorSW = marcadorSW;
     }
 
     public static JLabel getMarcadorST() {
         return marcadorST;
     }
 
-    public static void setMarcadorST(JLabel marcadorNick) {
-        Interfaz.marcadorST = marcadorNick;
+    public static void setMarcadorST(JLabel marcadorST) {
+        Interfaz.marcadorST = marcadorST;
     }
     
     
@@ -112,8 +112,8 @@ public class Interfaz extends javax.swing.JFrame {
         return HPST;
     }
 
-    public static void setHPST(JLabel HP_Nick) {
-        Interfaz.HPST = HP_Nick;
+    public static void setHPST(JLabel HPST) {
+        Interfaz.HPST = HPST;
     }
 
     public static JTextArea getListaGanadores() {
@@ -128,16 +128,16 @@ public class Interfaz extends javax.swing.JFrame {
         return ObjectSW;
     }
 
-    public static void setObjectSW(JLabel Object_) {
-        Interfaz.ObjectSW = Object_;
+    public static void setObjectSW(JLabel ObjectSW) {
+        Interfaz.ObjectSW = ObjectSW;
     }
 
     public static JLabel getObjectST() {
         return ObjectST;
     }
 
-    public static void setObjectST(JLabel Object_Nick) {
-        Interfaz.ObjectST = Object_Nick;
+    public static void setObjectST(JLabel ObjectST) {
+        Interfaz.ObjectST = ObjectST;
     }
     
     public static JLabel getNameSW() {
@@ -160,48 +160,48 @@ public class Interfaz extends javax.swing.JFrame {
         return Prioridad1SW;
     }
 
-    public static void setPrioridad1SW(JTextArea Prioridad1) {
-        Interfaz.Prioridad1SW = Prioridad1;
+    public static void setPrioridad1SW(JTextArea Prioridad1SW) {
+        Interfaz.Prioridad1SW = Prioridad1SW;
     }
 
     public static JTextArea getPrioridad1ST() {
         return Prioridad1ST;
     }
 
-    public static void setPrioridad1ST(JTextArea Prioridad1Nick) {
-        Interfaz.Prioridad1ST = Prioridad1Nick;
+    public static void setPrioridad1ST(JTextArea Prioridad1ST) {
+        Interfaz.Prioridad1ST = Prioridad1ST;
     }
 
     public static JTextArea getPrioridad2SW() {
         return Prioridad2SW;
     }
 
-    public static void setPrioridad2SW(JTextArea Prioridad2) {
-        Interfaz.Prioridad2SW = Prioridad2;
+    public static void setPrioridad2SW(JTextArea Prioridad2SW) {
+        Interfaz.Prioridad2SW = Prioridad2SW;
     }
 
     public static JTextArea getPrioridad2ST() {
         return Prioridad2ST;
     }
 
-    public static void setPrioridad2ST(JTextArea Prioridad2Nick) {
-        Interfaz.Prioridad2ST = Prioridad2Nick;
+    public static void setPrioridad2ST(JTextArea Prioridad2ST) {
+        Interfaz.Prioridad2ST = Prioridad2ST;
     }
 
     public static JTextArea getPrioridad3SW() {
         return Prioridad3SW;
     }
 
-    public static void setPrioridad3SW(JTextArea Prioridad3) {
-        Interfaz.Prioridad3SW = Prioridad3;
+    public static void setPrioridad3SW(JTextArea Prioridad3SW) {
+        Interfaz.Prioridad3SW = Prioridad3SW;
     }
 
     public static JTextArea getPrioridad3ST() {
         return Prioridad3ST;
     }
 
-    public static void setPrioridad3ST(JTextArea Prioridad3Nick) {
-        Interfaz.Prioridad3ST = Prioridad3Nick;
+    public static void setPrioridad3ST(JTextArea Prioridad3ST) {
+        Interfaz.Prioridad3ST = Prioridad3ST;
     }
 
     public static JTextArea getRefuerzoSW() {
@@ -216,24 +216,24 @@ public class Interfaz extends javax.swing.JFrame {
         return RefuerzoST;
     }
 
-    public static void setRefuerzoST(JTextArea RefuerzoNick) {
-        Interfaz.RefuerzoST = RefuerzoNick;
+    public static void setRefuerzoST(JTextArea RefuerzoST) {
+        Interfaz.RefuerzoST = RefuerzoST;
     }
 
     public static JLabel getStrengthSW() {
         return StrengthSW;
     }
 
-    public static void setStrengthSW(JLabel Strength_) {
-        Interfaz.StrengthSW = Strength_;
+    public static void setStrengthSW(JLabel StrengthSW) {
+        Interfaz.StrengthSW = StrengthSW;
     }
 
     public static JLabel getStrengthST() {
         return StrengthST;
     }
 
-    public static void setStrengthST(JLabel Strength_Nick) {
-        Interfaz.StrengthST = Strength_Nick;
+    public static void setStrengthST(JLabel StrengthST) {
+        Interfaz.StrengthST = StrengthST;
     }
 
     public static JLabel getIA_State() {
@@ -268,10 +268,10 @@ public class Interfaz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        NombreCartoon = new javax.swing.JLabel();
+        NombreStarWars = new javax.swing.JLabel();
         marcadorSW = new javax.swing.JLabel();
         marcadorST = new javax.swing.JLabel();
-        NombreNick = new javax.swing.JLabel();
+        NombreStarTrek = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -345,11 +345,11 @@ public class Interfaz extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        NombreCartoon.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        NombreCartoon.setForeground(new java.awt.Color(255, 255, 255));
-        NombreCartoon.setText("Star Wars");
-        getContentPane().add(NombreCartoon);
-        NombreCartoon.setBounds(240, 30, 118, 30);
+        NombreStarWars.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        NombreStarWars.setForeground(new java.awt.Color(255, 255, 255));
+        NombreStarWars.setText("Star Wars");
+        getContentPane().add(NombreStarWars);
+        NombreStarWars.setBounds(240, 30, 118, 30);
 
         marcadorSW.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         marcadorSW.setForeground(new java.awt.Color(255, 255, 255));
@@ -363,11 +363,11 @@ public class Interfaz extends javax.swing.JFrame {
         getContentPane().add(marcadorST);
         marcadorST.setBounds(730, 30, 16, 30);
 
-        NombreNick.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        NombreNick.setForeground(new java.awt.Color(255, 255, 255));
-        NombreNick.setText("Star Trek");
-        getContentPane().add(NombreNick);
-        NombreNick.setBounds(790, 30, 114, 30);
+        NombreStarTrek.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        NombreStarTrek.setForeground(new java.awt.Color(255, 255, 255));
+        NombreStarTrek.setText("Star Trek");
+        getContentPane().add(NombreStarTrek);
+        NombreStarTrek.setBounds(790, 30, 114, 30);
 
         jPanel5.setBackground(new java.awt.Color(0, 0, 0, 90));
         jPanel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -905,23 +905,6 @@ public class Interfaz extends javax.swing.JFrame {
             getPrioridad3ST().setText(Global.getST().getPrioridad3().show());
             getRefuerzoST().setText(Global.getST().getRefuerzo().show());
 
-            //            System.out.println("Prioridad 1 Cartoon");
-            //            Global.get().getPrioridad1().imprimir();
-            //
-            //            System.out.println("Prioridad 2 Cartoon");
-            //            Global.get().getPrioridad2().imprimir();
-            //
-            //            System.out.println("Prioridad 3 Cartoon");
-            //            Global.get().getPrioridad3().imprimir();
-            //
-            //            System.out.println("Prioridad 1 Nick");
-            //            Global.getNick().getPrioridad1().imprimir();
-            //
-            //            System.out.println("Prioridad 2 Nick");
-            //            Global.getNick().getPrioridad2().imprimir();
-            //
-            //            System.out.println("Prioridad 3 Nick");
-            //            Global.getNick().getPrioridad3().imprimir();
 
             this.Velocidad.setValue(10);
             admin.ia.setWaitingTime(((int)this.Velocidad.getValue())*1000);
@@ -982,8 +965,8 @@ public class Interfaz extends javax.swing.JFrame {
     private static javax.swing.JTextArea ListaGanadores;
     private static javax.swing.JLabel NameST;
     private static javax.swing.JLabel NameSW;
-    private javax.swing.JLabel NombreCartoon;
-    private javax.swing.JLabel NombreNick;
+    private javax.swing.JLabel NombreStarTrek;
+    private javax.swing.JLabel NombreStarWars;
     private static javax.swing.JLabel ObjectST;
     private static javax.swing.JLabel ObjectSW;
     private static javax.swing.JTextArea Prioridad1ST;

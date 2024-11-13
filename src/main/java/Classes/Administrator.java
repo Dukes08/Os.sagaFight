@@ -39,7 +39,7 @@ public class Administrator extends Thread{
         while(true){
             try{
                 checkEmpty();
-                mutex1.acquire(); //Wait del semáforo de Cartoon Network para conseguir el personaje
+                mutex1.acquire(); //Wait del semáforo de Star Wars para conseguir el personaje
                 if(Global.getSW().getPrioridad1().getSize() > 0){
                     this.ia.setP1(Global.getSW().getPrioridad1().desencolar().getElement());
                     Interfaz.getPrioridad1SW().setText(Global.getSW().getPrioridad1().show());
@@ -139,13 +139,13 @@ public class Administrator extends Thread{
     
     //antes de llamar a esta funcion se debe verificar que entro en el 80%
     public void AgregarPersonaje(){        
-        //crear un personaje de cartoon network
+        //crear un personaje de star wars
         int numP=(int) (Math.random()*19);
         int numO=(int) (Math.random()*9);
         Global.getSW().createCharacter(Global.getStarWars()[numP], Global.getObjetos()[numO],IdCh);
         IdCh++;
         
-        //crear un personaje de nick
+        //crear un personaje de star trek
         numP=(int) (Math.random()*19);
         numO=(int) (Math.random()*9);
         Global.getST().createCharacter(Global.getStarTrek()[numP], Global.getObjetos()[numO],IdCh);
@@ -159,38 +159,30 @@ public class Administrator extends Thread{
            // System.out.println("contador 3 de cn");
             Global.getSW().getPrioridad3().addCounter();
             
-           // System.out.println("contador 2 de nick");
+           // System.out.println("contador 2 de star trek");
             Global.getST().getPrioridad2().addCounter();
-           // System.out.println("contador 3 de nick");
+           // System.out.println("contador 3 de star trek");
             Global.getST().getPrioridad3().addCounter();
             
             //ahora veo como encolo y desencolo las que tienen 8 como contador
             Node deleted;
-            //para prioridad 2 de nick
-                System.out.println("personajes en cola de prioridad 2 de nick en admin");
+            //para prioridad 2 de star trek
             for (Node aux=Global.getST().getPrioridad2().getFirst(); aux!=null; aux=aux.getNext()) {
                 if(aux.getElement().getCounter()==8) {//si es de 8 debe subir la prioridad
                    // System.out.println("contador: "+aux.getElement().getCounter()+" personaje "+aux.getElement().getName()+" id "+aux.getElement().getId());
                     aux.getElement().setLevel(aux.getElement().getLevel()+1);
                     aux.getElement().setCounter(0);
                     int indice=Global.getST().getPrioridad2().search(aux);//indice del node a delete
-                   // System.out.println("indice: "+indice);
                     if(indice==0) {
                         
                         deleted=Global.getST().getPrioridad2().desencolar();
-                        //System.out.println("pipipi "+borrado.getNext());
                         
                     }
                     else {
                         deleted=Global.getST().getPrioridad2().delete(indice);//lo quito de la cola
-                    //System.out.println("node borrado "+borrado.getElement().getId());
                     }
                     Global.getST().getPrioridad1().encolar(aux.getElement());//lo meto a la de prioridad 1
-//                    System.out.println("nueva prioridad 1");
-//            Global.getST().getPrioridad1().show();
-//            System.out.println("nueva prioridad 2");
-//            Global.getST().getPrioridad2().show();
-                    //System.out.println("AAAAAAA "+aux.getNext());
+
                 }
         
             }
@@ -199,30 +191,21 @@ public class Administrator extends Thread{
             Interfaz.getPrioridad2ST().setText(Global.getST().getPrioridad2().show());
                     
             
-            //para prioridad 3 de nick
+            //para prioridad 3 de star trek
             for (Node aux=Global.getST().getPrioridad3().getFirst(); aux!=null; aux=aux.getNext()) {
                 if(aux.getElement().getCounter()==8) {//si es de 8 debe subir la prioridad
-                   // System.out.println("contador: "+aux.getElement().getCounter()+" personaje "+aux.getElement().getName()+" id "+aux.getElement().getId());
                     aux.getElement().setLevel(aux.getElement().getLevel()+1);
                     aux.getElement().setCounter(0);
                     int indice=Global.getST().getPrioridad3().search(aux);//indice del node a delete
-                   // System.out.println("indice: "+indice);
                     if(indice==0) {
                         
                         deleted=Global.getST().getPrioridad3().desencolar();
-                        //System.out.println("pipipi "+borrado.getNext());
                         
                     }
                     else {
                         deleted=Global.getST().getPrioridad3().delete(indice);//lo quito de la cola
-                    //System.out.println("node borrado "+borrado.getElement().getId());
                     }
                     Global.getST().getPrioridad2().encolar(aux.getElement());//lo meto a la de prioridad 1
-//                    System.out.println("nueva prioridad 2");
-//            Global.getST().getPrioridad2().show();
-//            System.out.println("nueva prioridad 3");
-//            Global.getST().getPrioridad3().show();
-                    //System.out.println("AAAAAAA "+aux.getNext());
                 }
         
             }
@@ -230,31 +213,21 @@ public class Administrator extends Thread{
             Interfaz.getPrioridad2ST().setText(Global.getST().getPrioridad2().show());
             Interfaz.getPrioridad3ST().setText(Global.getST().getPrioridad3().show());
                         
-            //para prioridad 2 de cartoon
-                System.out.println("personajes en cola de prioridad 2 de cartoon en admin");
+            //para prioridad 2 de star wars
             for (Node aux=Global.getSW().getPrioridad2().getFirst(); aux!=null; aux=aux.getNext()) {
                 if(aux.getElement().getCounter()==8) {//si es de 8 debe subir la prioridad
-                   // System.out.println("contador: "+aux.getElement().getCounter()+" personaje "+aux.getElement().getName()+" id "+aux.getElement().getId());
                     aux.getElement().setLevel(aux.getElement().getLevel()+1);
                     aux.getElement().setCounter(0);
                     int indice=Global.getSW().getPrioridad2().search(aux);//indice del node a delete
-                   // System.out.println("indice: "+indice);
                     if(indice==0) {
                         
                         deleted=Global.getSW().getPrioridad2().desencolar();
-                        //System.out.println("pipipi "+borrado.getNext());
                         
                     }
                     else {
                         deleted=Global.getSW().getPrioridad2().delete(indice);//lo quito de la cola
-                    //System.out.println("node borrado "+borrado.getElement().getId());
                     }
                     Global.getSW().getPrioridad1().encolar(aux.getElement());//lo meto a la de prioridad 1
-//                    System.out.println("nueva prioridad 1");
-//            Global.getSW().getPrioridad1().show();
-//            System.out.println("nueva prioridad 2");
-//            Global.getSW().getPrioridad2().show();
-                    //System.out.println("AAAAAAA "+aux.getNext());
                 }
         
             }
@@ -262,30 +235,21 @@ public class Administrator extends Thread{
             Interfaz.getPrioridad1SW().setText(Global.getSW().getPrioridad1().show());
             Interfaz.getPrioridad2SW().setText(Global.getSW().getPrioridad2().show());
             
-            //para prioridad 3 de cartoon
+            //para prioridad 3 de star wars
             for (Node aux=Global.getSW().getPrioridad3().getFirst(); aux!=null; aux=aux.getNext()) {
                 if(aux.getElement().getCounter()==8) {//si es de 8 debe subir la prioridad
-                   // System.out.println("contador: "+aux.getElement().getCounter()+" personaje "+aux.getElement().getName()+" id "+aux.getElement().getId());
                     aux.getElement().setLevel(aux.getElement().getLevel()+1);
                     aux.getElement().setCounter(0);
                     int indice=Global.getSW().getPrioridad3().search(aux);//indice del node a delete
-                   // System.out.println("indice: "+indice);
                     if(indice==0) {
                         
                         deleted=Global.getSW().getPrioridad3().desencolar();
-                        //System.out.println("pipipi "+borrado.getNext());
                         
                     }
                     else {
                         deleted=Global.getSW().getPrioridad3().delete(indice);//lo quito de la cola
-                    //System.out.println("node borrado "+borrado.getElement().getId());
                     }
                     Global.getSW().getPrioridad2().encolar(aux.getElement());//lo meto a la de prioridad 1
-//                    System.out.println("nueva prioridad 2");
-//            Global.getSW().getPrioridad2().show();
-//            System.out.println("nueva prioridad 3");
-//            Global.getSW().getPrioridad3().show();
-                    //System.out.println("AAAAAAA "+aux.getNext());
                 }
         
             }
