@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package EDD;
+import Classes.Character;
+
 
 /**
  *
@@ -57,16 +59,19 @@ public class Queue {
     
     // Método para agregar un elemento a la cola (encolar)
     public Node encolar(Character element) {
-        Node nuevo = new Node(element); // Crea un nuevo nodo con el elemento
-        if (empty()) { // Si la cola está vacía
-            setFirst(nuevo); // Establece el nuevo nodo como el primero
-            setLast(nuevo); // Establece el nuevo nodo como el último
-        } else { // Si la cola no está vacía
-            getLast().setNext(nuevo); // Conecta el último nodo con el nuevo nodo
-            setLast(nuevo); // Actualiza el último nodo
+        Node nuevo=new Node(element);
+        if (empty()) {
+            setFirst(nuevo);
+            setLast(nuevo);
+        
         }
-        size++; // Incrementa el tamaño de la cola
-        return nuevo; // Retorna el nuevo nodo
+        
+        else {
+           getLast().setNext(nuevo);
+           setLast(nuevo);
+        }
+        size ++;
+        return nuevo;
     }
     
     // Método para eliminar un elemento de la cola (desencolar)
