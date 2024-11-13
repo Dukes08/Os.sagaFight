@@ -26,7 +26,7 @@ public class Character {
         this.id = id;
     }
     
-    public void CalculateStats() {
+    public void calculateStats() {
         int stat= (int) (Math.random()*100);
         
         if(stat>=0 && stat<60){

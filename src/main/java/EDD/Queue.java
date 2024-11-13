@@ -85,7 +85,7 @@ public class Queue {
         }
         return null; // Retorna null si la cola está vacía
     }
-    public void subir_contador() {
+    public void addCounter() {
         //se recorre la cola
         for (Node aux=getFirst(); aux!=null; aux=aux.getNext()) {
             if(aux.getElement().getCounter()<8){//si el contador es menor a 8 sube
@@ -98,7 +98,7 @@ public class Queue {
     
     }
     
-     public int Buscar(Node element) {
+     public int search(Node element) {
         int index=0;
         
         for (Node aux=getFirst(); aux!=null; aux=aux.getNext()) {
@@ -110,7 +110,7 @@ public class Queue {
         return -1;
     }
     
-    public Node borrar(int index) {
+    public Node delete(int index) {
         Node aux=getFirst();
         Node retornar=null;
         int count=0;
@@ -131,7 +131,7 @@ public class Queue {
         return retornar;
     }
     
-    public String imprimir() {
+    public String show() {
         String contenido="id:\n";
         for (Node aux=getFirst(); aux!=null; aux=aux.getNext()) {
             contenido+=aux.getElement().getId()+"\n";

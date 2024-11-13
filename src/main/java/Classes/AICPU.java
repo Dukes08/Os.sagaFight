@@ -57,31 +57,31 @@ public class AICPU {
     
 //    code starter function
    
-    public Character Ganador(){ //determinar cual de los dos personajes gano 
-        int ventaja_p1=0;
-        int ventaja_p2=0;
+    public Character winner(){ //determinar cual de los dos personajes gano 
+        int advantage_p1=0;
+        int advantage_p2=0;
                 
         if(p1.getAgility()>p2.getAgility()){
-            ventaja_p1++;
+            advantage_p1++;
         }else {
-            ventaja_p2++;
+            advantage_p2++;
         }
                 
         if(p1.getStrength()>=p2.getStrength()){
-            ventaja_p1++;
+            advantage_p1++;
         }else {
-            ventaja_p2++;
+            advantage_p2++;
         }
                 
         if(p1.getHability()>p2.getHability()) {
-            ventaja_p1++;
+            advantage_p1++;
         }else {
-            ventaja_p2++;
+            advantage_p2++;
         }
         if(p1.getHp()>=p2.getHp()) {
-            ventaja_p1++;
+            advantage_p1++;
         }else {
-            ventaja_p2++;
+            advantage_p2++;
         }
         
 //        add interface conditional to add winner
