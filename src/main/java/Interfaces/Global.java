@@ -13,7 +13,7 @@ import EDD.List;
  */
 public class Global {
     private static String[] starWars={"Darth Vader", "Anakin Skywalker", "Luke Skywalker", "Han Solo", "Obi-Wan Kenobi", "Yoda", "Princesa Leia", "Chewbacca", "Mando", "Boba Fett", "Qui-Gon Jinn", "Ahsoka Tano", "Darth Maul", "Mace Windu", "Emperador Palpatine", "Lando Calrissian", "General Grievous", "Poe Dameron", "Rey", "Kylo Ren"} ;
-    private static String[] starTreck={"James Kirk", "Spock", "Jean-Luc Picard", "Leonard McCoy", "Khan Noonien Singh", "Odo", "Benjamin Sisko", "Q", "Worf", "Kira Nerys", "Sarek", "Elim Garak", "Dukat", "Montgomery Scott", "Miles O'Brien", "Kathryn Janeway", "Tasha Yar", "Gowron", "Charles Tucker", "William Riker"};
+    private static String[] starTrek={"James Kirk", "Spock", "Jean-Luc Picard", "Leonard McCoy", "Khan Noonien Singh", "Odo", "Benjamin Sisko", "Q", "Worf", "Kira Nerys", "Sarek", "Elim Garak", "Dukat", "Montgomery Scott", "Miles O'Brien", "Kathryn Janeway", "Tasha Yar", "Gowron", "Charles Tucker", "William Riker"};
     
     private static String[] objetos={"Strength","LightSaber","Gun","RayGun","SpecialSuit","MindPowers","AlienWings","DarkForceBlood","PurpleLightSaber","RedLightSaber"};
   
@@ -37,17 +37,17 @@ public class Global {
     }
 
     /**
-     * @return the starTreck
+     * @return the starTrek
      */
-    public static String[] getStarTreck() {
-        return starTreck;
+    public static String[] getStarTrek() {
+        return starTrek;
     }
 
     /**
-     * @param aStarTreck the starTreck to set
+     * @param aStarTrek the starTrek to set
      */
-    public static void setStarTreck(String[] aStarTreck) {
-        starTreck = aStarTreck;
+    public static void setStarTrek(String[] aStarTrek) {
+        starTrek = aStarTrek;
     }
 
     /**
