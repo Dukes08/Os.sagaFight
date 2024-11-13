@@ -300,8 +300,13 @@ public class Administrator extends Thread{
     }
     
     public void changeIcons(){
-        Interfaz.getIconST().setIcon(new ImageIcon(getClass().getResource("/Users/andresrivas/proyectos-so/Os.sagaFight/src/main/java/InterfaceImages/"+this.ia.getP2().getName()+".png")));
-        Interfaz.getIconSW().setIcon(new ImageIcon(getClass().getResource("/Users/andresrivas/proyectos-so/Os.sagaFight/src/main/java/InterfaceImages/"+this.ia.getP1().getName()+".png")));
+        String imageNameP2 = this.ia.getP2().getName() + ".jpg";
+        String imageNameP1 = this.ia.getP1().getName() + ".jpg";
+
+        Interfaz.getIconST().setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/" + imageNameP2)));
+        Interfaz.getIconSW().setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/" + imageNameP1)));
+
+
     }
     
     public void changeStatsSW(){
@@ -335,8 +340,8 @@ public class Administrator extends Thread{
     }
     
     public void clearIcons(){
-        Interfaz.getIconST().setIcon(new ImageIcon(getClass().getResource("/Users/andresrivas/proyectos-so/Os.sagaFight/src/main/java/InterfaceImages/Carta.png")));
-        Interfaz.getIconSW().setIcon(new ImageIcon(getClass().getResource("/Users/andresrivas/proyectos-so/Os.sagaFight/src/main/java/InterfaceImages/Carta.png")));
+        Interfaz.getIconST().setIcon(new ImageIcon(getClass().getResource("/images/Carta.jpg")));
+        Interfaz.getIconSW().setIcon(new ImageIcon(getClass().getResource("/images/Carta.jpg")));
     }
     
     public void checkEmpty(){

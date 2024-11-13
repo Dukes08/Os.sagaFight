@@ -404,8 +404,7 @@ public class Interfaz extends javax.swing.JFrame {
         getContentPane().add(jPanel5);
         jPanel5.setBounds(930, 20, 210, 590);
 
-        IconST.setIcon(new javax.swing.ImageIcon("/Users/andresrivas/proyectos-so/Os.sagaFight/src/main/java/InterfaceImages/Carta.jpg")); // NOI18N
-        IconST.setText("jLabel1");
+        IconST.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Carta.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -425,8 +424,7 @@ public class Interfaz extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(670, 80, 250, 330);
 
-        IconSW.setIcon(new javax.swing.ImageIcon("/Users/andresrivas/proyectos-so/Os.sagaFight/src/main/java/InterfaceImages/Carta.jpg")); // NOI18N
-        IconSW.setText("jLabel1");
+        IconSW.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Carta.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -804,7 +802,7 @@ public class Interfaz extends javax.swing.JFrame {
         getContentPane().add(jPanel6);
         jPanel6.setBounds(0, 20, 210, 590);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/andresrivas/proyectos-so/Os.sagaFight/src/main/java/InterfaceImages/Clash.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Clash.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1240, 680);

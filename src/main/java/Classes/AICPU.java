@@ -19,16 +19,16 @@ import javax.swing.ImageIcon;
 public class AICPU extends Thread{
     private Character p1; //Personaje de sw
     private Character p2; //Personaje de st
-    private int CnWins;
-    private int NickWins;
+    private int SWWins;
+    private int STWins;
     private String state;
     private int WaitingTime;
     
      public AICPU () {
         this.p1 = null;
         this.p2 = null;
-        this.CnWins = 0;
-        this.NickWins = 0;
+        this.SWWins = 0;
+        this.STWins = 0;
         this.state = "Esperando...";
         this.WaitingTime = 10000;
     }
@@ -78,16 +78,8 @@ public class AICPU extends Thread{
                 System.out.println("personaje 2, id: "+p2.getId()+" nombre "+p2.getName()+" stats:\nAgilidad: "+p2.getAgility()+"\nFuerza: "+p2.getStrength()+"\nHabilidad: "+p2.getHability()+"\nHP: "+p2.getHp());
                 Interfaz.getResultado_Combate().setText("Hubo un ganador!");
                 
-            if(p2.getName().compareTo("Aang estado avatar")==0) {
-                ganador=p2;
-                Interfaz.getListaGanadores().append("N-"+p2.getId()+'\n');
-                Interfaz.getIconSW().setIcon(new ImageIcon(getClass().getResource("/Users/andresrivas/proyectos-so/Os.sagaFight/src/main/java/InterfaceImages/Carta.png"))); // Se quita la foto del Perdedor
-                this.NickWins ++;
-                Interfaz.getMarcadorST().setText(Integer.toString(this.NickWins));
-                
-            } else {
                 ganador=winner();
-            }
+                System.out.println(ganador.getName() +" "+ ganador.getLevel() +" "+ ganador.getId());
                 
                 Global.getGanadores().insertBegin(ganador);
 
@@ -147,9 +139,22 @@ public class AICPU extends Thread{
             advantage_p2++;
         }
         
-//        add interface conditional to add winner
-        
-        
-        return p1;
+        if(advantage_p1>advantage_p2){
+            System.out.println(p1.getName()+" es el ganador");
+            Interfaz.getListaGanadores().append("C-"+p1.getId()+'\n');
+            Interfaz.getIconST().setIcon(new ImageIcon(getClass().getResource("/images/Carta.jpg"))); // Se quita la foto del perdedor
+            this.SWWins ++;
+            Interfaz.getMarcadorSW().setText(Integer.toString(this.SWWins));
+            
+            return p1;
+        }else{
+            System.out.println(p2.getName()+" es el ganador");
+            Interfaz.getListaGanadores().append("N-"+p2.getId()+'\n');
+            Interfaz.getIconSW().setIcon(new ImageIcon(getClass().getResource("/images/Carta.jpg"))); // Se quita la foto del Perdedor
+            this.STWins ++;
+            Interfaz.getMarcadorST().setText(Integer.toString(this.STWins));
+            
+            return p2;
+        }
     }
 }

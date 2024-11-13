@@ -305,9 +305,8 @@
         <Component class="javax.swing.JLabel" name="IconST">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="/Users/andresrivas/proyectos-so/Os.sagaFight/src/main/java/InterfaceImages/Carta.jpg"/>
+              <Image iconType="3" name="/images/Carta.jpg"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
@@ -341,9 +340,8 @@
         <Component class="javax.swing.JLabel" name="IconSW">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="/Users/andresrivas/proyectos-so/Os.sagaFight/src/main/java/InterfaceImages/Carta.jpg"/>
+              <Image iconType="3" name="/images/Carta.jpg"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
@@ -1166,7 +1164,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="/Users/andresrivas/proyectos-so/Os.sagaFight/src/main/java/InterfaceImages/Clash.jpg"/>
+          <Image iconType="3" name="/images/Clash.jpg"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel1"/>
       </Properties>
