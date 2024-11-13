@@ -85,4 +85,58 @@ public class Queue {
         }
         return null; // Retorna null si la cola está vacía
     }
+    public void subir_contador() {
+        //se recorre la cola
+        for (Node aux=getFirst(); aux!=null; aux=aux.getNext()) {
+            if(aux.getElement().getCounter()<8){//si el contador es menor a 8 sube
+                aux.getElement().setCounter(aux.getElement().getCounter()+1);//se suma 1 al contador 
+               // System.out.println("contado nuevo: "+aux.getElement().getCounter()+" nombre "+aux.getElement().getName()+" id "+aux.getElement().getId() );
+            }
+            
+            
+        }
+    
+    }
+    
+     public int Buscar(Node element) {
+        int index=0;
+        
+        for (Node aux=getFirst(); aux!=null; aux=aux.getNext()) {
+            if(aux==element) {
+                return index;
+            }
+            index++;
+        }
+        return -1;
+    }
+    
+    public Node borrar(int index) {
+        Node aux=getFirst();
+        Node retornar=null;
+        int count=0;
+        if (index!=0) {
+        while(aux.getNext()!=null && count!=(index-1)) {
+            aux=aux.getNext();
+            count++;
+        }
+        
+        if(aux.getNext()!=null) {
+            retornar=aux.getNext();
+            aux.setNext(aux.getNext().getNext());
+        
+        }
+        
+        } 
+        
+        return retornar;
+    }
+    
+    public String imprimir() {
+        String contenido="id:\n";
+        for (Node aux=getFirst(); aux!=null; aux=aux.getNext()) {
+            contenido+=aux.getElement().getId()+"\n";
+            //System.out.println(aux.getElement().getId()+" "+aux.getElement().getName() +" "+aux.getElement().getObject());
+        }
+        return contenido;
+    }
 }
