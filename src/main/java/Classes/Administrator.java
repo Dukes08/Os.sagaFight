@@ -86,36 +86,29 @@ public class Administrator extends Thread{
             if(Global.getSW().getRefuerzo().getSize()>0){
                 int chance= (int) (Math.random()*100);
                 mutex1.acquire();
-                if(chance>= 0 && chance <= 40){
-                    System.out.println("Un personaje de Star Wars salió de la cola de refuerzos");
-                    Node character = Global.getSW().getRefuerzo().desencolar();
-                    Global.getSW().getPrioridad1().encolar(character.getElement());
-                    Interfaz.getRefuerzoSW().setText(Global.getSW().getRefuerzo().show());
-                    Interfaz.getPrioridad1SW().setText(Global.getSW().getPrioridad1().show());
-                }else{
-                    System.out.println("Un personaje de Star Wars se mandó al final de la cola de refuerzos");
-                    Node character = Global.getSW().getRefuerzo().desencolar();
-                    Global.getSW().getRefuerzo().encolar(character.getElement());
-                    Interfaz.getRefuerzoSW().setText(Global.getSW().getRefuerzo().show());
-                }
-                mutex1.release();
-            }
-
-            if(Global.getST().getRefuerzo().getSize()>0){
-                int chance= (int) (Math.random()*100);
                 mutex2.acquire();
                 if(chance>= 0 && chance <= 40){
+                    System.out.println("Un personaje de Star Wars salió de la cola de refuerzos");
+                    Node characterSW = Global.getSW().getRefuerzo().desencolar();
+                    Global.getSW().getPrioridad1().encolar(characterSW.getElement());
+                    Interfaz.getRefuerzoSW().setText(Global.getSW().getRefuerzo().show());
+                    Interfaz.getPrioridad1SW().setText(Global.getSW().getPrioridad1().show());
                     System.out.println("Un personaje de Star Trek salió de la cola de refuerzos");
-                    Node character = Global.getST().getRefuerzo().desencolar();
-                    Global.getST().getPrioridad1().encolar(character.getElement());
+                    Node characterST = Global.getST().getRefuerzo().desencolar();
+                    Global.getST().getPrioridad1().encolar(characterST.getElement());
                     Interfaz.getRefuerzoST().setText(Global.getST().getRefuerzo().show());
                     Interfaz.getPrioridad1ST().setText(Global.getST().getPrioridad1().show());
                 }else{
+                    System.out.println("Un personaje de Star Wars se mandó al final de la cola de refuerzos");
+                    Node characterSW = Global.getSW().getRefuerzo().desencolar();
+                    Global.getSW().getRefuerzo().encolar(characterSW.getElement());
+                    Interfaz.getRefuerzoSW().setText(Global.getSW().getRefuerzo().show());
                     System.out.println("Un personaje de Star Trek se mandó al final de la cola de refuerzos");
-                    Node character = Global.getST().getRefuerzo().desencolar();
-                    Global.getST().getRefuerzo().encolar(character.getElement());
+                    Node characterST = Global.getST().getRefuerzo().desencolar();
+                    Global.getST().getRefuerzo().encolar(characterST.getElement());
                     Interfaz.getRefuerzoST().setText(Global.getST().getRefuerzo().show());
                 }
+                mutex1.release();
                 mutex2.release();
             }
             //hora de ver si se crea un personaje o no 
@@ -154,22 +147,16 @@ public class Administrator extends Thread{
     }
     
     public void Actualizar_colas() {
-           // System.out.println("contador 2 de cn");
             Global.getSW().getPrioridad2().addCounter();
-           // System.out.println("contador 3 de cn");
             Global.getSW().getPrioridad3().addCounter();
             
-           // System.out.println("contador 2 de star trek");
             Global.getST().getPrioridad2().addCounter();
-           // System.out.println("contador 3 de star trek");
             Global.getST().getPrioridad3().addCounter();
             
-            //ahora veo como encolo y desencolo las que tienen 8 como contador
             Node deleted;
             //para prioridad 2 de star trek
             for (Node aux=Global.getST().getPrioridad2().getFirst(); aux!=null; aux=aux.getNext()) {
                 if(aux.getElement().getCounter()==8) {//si es de 8 debe subir la prioridad
-                   // System.out.println("contador: "+aux.getElement().getCounter()+" personaje "+aux.getElement().getName()+" id "+aux.getElement().getId());
                     aux.getElement().setLevel(aux.getElement().getLevel()+1);
                     aux.getElement().setCounter(0);
                     int indice=Global.getST().getPrioridad2().search(aux);//indice del node a delete
