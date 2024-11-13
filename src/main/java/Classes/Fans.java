@@ -27,8 +27,8 @@ public class Fans {
         this.refuerzo=new Queue();
     }
     
-    public void createCharacter(String name, String Object, int id){
-        Character personaje = new Character(name,Object,id);
+    public void createCharacter(String name,int hability, int strength, int hp, int agility, String Object, int id){
+        Character personaje = new Character(name,hability, strength, hp, agility, Object,id);
         personaje.calculateStats();
         if (personaje.getLevel()==1){
             prioridad1.encolar(personaje);

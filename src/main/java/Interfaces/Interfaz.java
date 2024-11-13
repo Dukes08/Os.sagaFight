@@ -860,7 +860,7 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Clash.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 10, 1240, 680);
+        jLabel1.setBounds(0, 0, 1240, 670);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -889,10 +889,10 @@ public class Interfaz extends javax.swing.JFrame {
 
             for (int i = 0; i < 20; i++) {
                 int random=(int)(Math.random()*9);
-                Global.getSW().createCharacter(Global.getStarWars()[i], Global.getObjetos()[random],admin.getIdCh());
+                Global.getSW().createCharacter(Global.getStarWars()[i],Global.getAbilitySW()[i],Global.getStrengthSW()[i], Global.getHpSW()[i], Global.getAgilitySW()[i], Global.getObjetos()[random],admin.getIdCh());
                 admin.setIdCh(admin.getIdCh()+1);
                 random=(int)(Math.random()*9);
-                Global.getST().createCharacter(Global.getStarTrek()[i], Global.getObjetos()[random],admin.getIdCh());
+                Global.getST().createCharacter(Global.getStarTrek()[i], Global.getAbilityST()[i],Global.getStrengthST()[i], Global.getHpST()[i], Global.getAgilityST()[i], Global.getObjetos()[random],admin.getIdCh());
                 admin.setIdCh(admin.getIdCh()+1);
             }
             getPrioridad1SW().setText(Global.getSW().getPrioridad1().show());

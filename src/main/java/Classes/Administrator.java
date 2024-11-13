@@ -135,13 +135,13 @@ public class Administrator extends Thread{
         //crear un personaje de star wars
         int numP=(int) (Math.random()*19);
         int numO=(int) (Math.random()*9);
-        Global.getSW().createCharacter(Global.getStarWars()[numP], Global.getObjetos()[numO],IdCh);
+        Global.getSW().createCharacter(Global.getStarWars()[numP], Global.getAbilitySW()[numP],Global.getStrengthSW()[numP], Global.getHpSW()[numP], Global.getAgilitySW()[numP], Global.getObjetos()[numO],IdCh);
         IdCh++;
         
         //crear un personaje de star trek
         numP=(int) (Math.random()*19);
         numO=(int) (Math.random()*9);
-        Global.getST().createCharacter(Global.getStarTrek()[numP], Global.getObjetos()[numO],IdCh);
+        Global.getST().createCharacter(Global.getStarTrek()[numP], Global.getAbilityST()[numP],Global.getStrengthST()[numP], Global.getHpST()[numP], Global.getAgilityST()[numP], Global.getObjetos()[numO],IdCh);
         IdCh++;
         
     }
@@ -304,14 +304,14 @@ public class Administrator extends Thread{
         if(Global.getSW().getPrioridad1().getSize() == 0 && Global.getSW().getPrioridad2().getSize() == 0 && Global.getSW().getPrioridad3().getSize() == 0){
             int numP=(int) (Math.random()*19);
             int numO=(int) (Math.random()*9);
-            Global.getSW().createCharacter(Global.getStarWars()[numP], Global.getObjetos()[numO],IdCh);
+            Global.getSW().createCharacter(Global.getStarWars()[numP],Global.getAbilitySW()[numP],Global.getStrengthSW()[numP], Global.getHpSW()[numP], Global.getAgilitySW()[numP], Global.getObjetos()[numO],IdCh);
             IdCh++;            
         }
         
         if(Global.getST().getPrioridad1().getSize() == 0 && Global.getST().getPrioridad2().getSize() == 0 && Global.getST().getPrioridad3().getSize() == 0){
             int numP=(int) (Math.random()*19);
             int numO=(int) (Math.random()*9);
-            Global.getST().createCharacter(Global.getStarTrek()[numP], Global.getObjetos()[numO],IdCh);
+            Global.getST().createCharacter(Global.getStarTrek()[numP],Global.getAbilityST()[numP],Global.getStrengthST()[numP], Global.getHpST()[numP], Global.getAgilityST()[numP], Global.getObjetos()[numO],IdCh);
             IdCh++;
         }
     }

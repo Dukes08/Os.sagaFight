@@ -20,39 +20,35 @@ public class Character {
     private int strength;
     private int Agility;
 
-    public Character(String name, String object, int id) {
+    public Character(String name, int hability, int strength, int hp, int agility, String object, int id) {
         this.name = name;
         this.object = object;
         this.id = id;
+        this.hability = hability;
+        this.strength = strength;
+        this.hp = hp;
+        this.Agility = agility;
     }
     
     public void calculateStats() {
         int stat= (int) (Math.random()*100);
         
         if(stat>=0 && stat<60){
-            this.hability=2;
+            this.hability+=5;
             this.numCalidad++;
-        } else {
-            this.hability=0;
-        }
+        } 
         if(stat>=0 && stat<70) {
-            this.hp=3;
+            this.hp+=5;
             this.numCalidad++;
-        } else {
-            this.hp=1;
-        }
+        } 
         if(stat>=0 && stat<50){
-            this.strength=4;
+            this.strength+=5;
             this.numCalidad++;
-        } else {
-            this.strength=0;
-        }
+        } 
         if(stat>=0 && stat<40){
-            this.Agility=5;
+            this.Agility+=5;
             this.numCalidad++;
-        } else {
-            this.Agility=0;
-        }
+        } 
         
         if(this.numCalidad==4) {
             this.level=1;
