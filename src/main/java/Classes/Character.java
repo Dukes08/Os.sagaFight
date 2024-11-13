@@ -115,7 +115,7 @@ public class Character {
            this.hp++;
        }
        
-       else if(this.object.compareTo("BlackLightSaber")==0){
+       else if(this.object.compareTo("RedLightSaber")==0){
            this.hp+=4;
            this.Agility+=2;
        }
