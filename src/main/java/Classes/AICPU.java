@@ -142,7 +142,7 @@ public class AICPU extends Thread{
         if(advantage_p1>advantage_p2){
             System.out.println(p1.getName()+" es el ganador");
             Interfaz.getListaGanadores().append("SW-"+p1.getId()+'\n');
-            Interfaz.getIconST().setIcon(new ImageIcon(getClass().getResource("/images/Carta.jpg"))); // Se quita la foto del perdedor
+            //Interfaz.getIconST().setIcon(new ImageIcon(getClass().getResource("/images/Carta.jpg"))); // Se quita la foto del perdedor
             this.SWWins ++;
             Interfaz.getMarcadorSW().setText(Integer.toString(this.SWWins));
             
@@ -150,7 +150,7 @@ public class AICPU extends Thread{
         }else{
             System.out.println(p2.getName()+" es el ganador");
             Interfaz.getListaGanadores().append("ST-"+p2.getId()+'\n');
-            Interfaz.getIconSW().setIcon(new ImageIcon(getClass().getResource("/images/Carta.jpg"))); // Se quita la foto del Perdedor
+           // Interfaz.getIconSW().setIcon(new ImageIcon(getClass().getResource("/images/Carta.jpg"))); // Se quita la foto del Perdedor
             this.STWins ++;
             Interfaz.getMarcadorST().setText(Integer.toString(this.STWins));
             
