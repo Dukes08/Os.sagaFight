@@ -51,11 +51,11 @@ public class Administrator extends Thread{
                     Interfaz.getPrioridad3SW().setText(Global.getSW().getPrioridad3().show());
                 }
                 System.out.println("Se escogio uno de Star Wars");
-                mutex1.release(); //Se cierra la zona crítica de Cartoon Network
+                mutex1.release(); 
                 
-                changeStatsSW(); //Se cambian las Stats al personaje actual de Cartoon Network
+                changeStatsSW(); 
 
-                mutex2.acquire(); //Wait del Semáforo de Nickelodeon para conseguir el personaje
+                mutex2.acquire(); 
 
                 if(Global.getST().getPrioridad1().getSize() > 0){
                     this.ia.setP2(Global.getST().getPrioridad1().desencolar().getElement());
@@ -67,10 +67,10 @@ public class Administrator extends Thread{
                     this.ia.setP2(Global.getST().getPrioridad3().desencolar().getElement());
                     Interfaz.getPrioridad3ST().setText(Global.getST().getPrioridad3().show());
                 }
-                System.out.println("Se escogio uno de Nick");
-                mutex2.release(); //Se cierra la zona crítica de Nickelodeon
+                System.out.println("Se escogio uno de Star Trek");
+                mutex2.release(); 
                 
-                changeStatsST(); //Se cambian las Stats al personaje actual de Nick
+                changeStatsST(); 
             
             changeIcons();    
                 
@@ -87,13 +87,13 @@ public class Administrator extends Thread{
                 int chance= (int) (Math.random()*100);
                 mutex1.acquire();
                 if(chance>= 0 && chance <= 40){
-                    System.out.println("Un personaje de CN salió de la cola de refuerzos");
+                    System.out.println("Un personaje de Star Wars salió de la cola de refuerzos");
                     Node character = Global.getSW().getRefuerzo().desencolar();
                     Global.getSW().getPrioridad1().encolar(character.getElement());
                     Interfaz.getRefuerzoSW().setText(Global.getSW().getRefuerzo().show());
                     Interfaz.getPrioridad1SW().setText(Global.getSW().getPrioridad1().show());
                 }else{
-                    System.out.println("Un personaje de CN se mandó al final de la cola de refuerzos");
+                    System.out.println("Un personaje de Star Wars se mandó al final de la cola de refuerzos");
                     Node character = Global.getSW().getRefuerzo().desencolar();
                     Global.getSW().getRefuerzo().encolar(character.getElement());
                     Interfaz.getRefuerzoSW().setText(Global.getSW().getRefuerzo().show());
@@ -105,13 +105,13 @@ public class Administrator extends Thread{
                 int chance= (int) (Math.random()*100);
                 mutex2.acquire();
                 if(chance>= 0 && chance <= 40){
-                    System.out.println("Un personaje de Nick salió de la cola de refuerzos");
+                    System.out.println("Un personaje de Star Trek salió de la cola de refuerzos");
                     Node character = Global.getST().getRefuerzo().desencolar();
                     Global.getST().getPrioridad1().encolar(character.getElement());
                     Interfaz.getRefuerzoST().setText(Global.getST().getRefuerzo().show());
                     Interfaz.getPrioridad1ST().setText(Global.getST().getPrioridad1().show());
                 }else{
-                    System.out.println("Un personaje de Nick se mandó al final de la cola de refuerzos");
+                    System.out.println("Un personaje de Star Trek se mandó al final de la cola de refuerzos");
                     Node character = Global.getST().getRefuerzo().desencolar();
                     Global.getST().getRefuerzo().encolar(character.getElement());
                     Interfaz.getRefuerzoST().setText(Global.getST().getRefuerzo().show());
@@ -310,6 +310,8 @@ public class Administrator extends Thread{
     }
     
     public void changeStatsSW(){
+        Interfaz.getNameSW().setText(this.ia.getP1().getName());
+        System.out.println(this.ia.getP1().getName());
         Interfaz.getObjectSW().setText(this.ia.getP1().getObject());
         Interfaz.getAbilitySW().setText(Integer.toString(this.ia.getP1().getHability()));
         Interfaz.getStrengthSW().setText(Integer.toString(this.ia.getP1().getStrength()));
@@ -318,6 +320,7 @@ public class Administrator extends Thread{
     }
     
     public void changeStatsST(){
+        Interfaz.getNameST().setText(this.ia.getP2().getName());
         Interfaz.getObjectST().setText(this.ia.getP2().getObject());
         Interfaz.getAbilityST().setText(Integer.toString(this.ia.getP2().getHability()));
         Interfaz.getStrengthST().setText(Integer.toString(this.ia.getP2().getStrength()));
@@ -326,12 +329,14 @@ public class Administrator extends Thread{
     }
     
     public void clearStats(){
+        Interfaz.getNameSW().setText("-");
         Interfaz.getObjectSW().setText("-");
         Interfaz.getAbilitySW().setText("-");
         Interfaz.getStrengthSW().setText("-");
         Interfaz.getHPSW().setText("-");
         Interfaz.getAgilitySW().setText("-");
         
+        Interfaz.getNameST().setText("-");
         Interfaz.getObjectST().setText("-");
         Interfaz.getAbilityST().setText("-");
         Interfaz.getStrengthST().setText("-");

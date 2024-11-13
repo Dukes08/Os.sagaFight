@@ -83,7 +83,7 @@ public class Interfaz extends javax.swing.JFrame {
     public static void setAbilityST(JLabel AbilityST) {
         Interfaz.AbilityST = AbilityST;
     }
-
+    
     public static JLabel getAgilitySW() {
         return AgilitySW;
     }
@@ -138,6 +138,22 @@ public class Interfaz extends javax.swing.JFrame {
 
     public static void setObjectST(JLabel Object_Nick) {
         Interfaz.ObjectST = Object_Nick;
+    }
+    
+    public static JLabel getNameSW() {
+        return NameSW;
+    }
+
+    public static void setNameSW(JLabel NameSW) {
+        Interfaz.NameSW = NameSW;
+    }
+
+    public static JLabel getNameST() {
+        return NameST;
+    }
+
+    public static void setNameST(JLabel NameST) {
+        Interfaz.NameST = NameST;
     }
 
     public static JTextArea getPrioridad1SW() {
@@ -287,6 +303,8 @@ public class Interfaz extends javax.swing.JFrame {
         HPSW = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         AgilitySW = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        NameSW = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         ListaGanadores = new javax.swing.JTextArea();
@@ -301,6 +319,8 @@ public class Interfaz extends javax.swing.JFrame {
         HPST = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         AgilityST = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        NameST = new javax.swing.JLabel();
         jPanel13 = new javax.swing.JPanel();
         Resultado_Combate2 = new javax.swing.JLabel();
         IA_State = new javax.swing.JLabel();
@@ -518,22 +538,21 @@ public class Interfaz extends javax.swing.JFrame {
         AgilitySW.setForeground(new java.awt.Color(255, 255, 255));
         AgilitySW.setText("-");
 
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel24.setText("Nombre:");
+
+        NameSW.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        NameSW.setForeground(new java.awt.Color(255, 255, 255));
+        NameSW.setText("-");
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
-                .addComponent(jLabel15)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(AbilitySW)
-                .addGap(0, 178, Short.MAX_VALUE))
-            .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jLabel23)
-                        .addGap(18, 18, 18)
-                        .addComponent(ObjectSW))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addComponent(jLabel16)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -545,27 +564,46 @@ public class Interfaz extends javax.swing.JFrame {
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addComponent(jLabel12)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(AgilitySW)))
+                        .addComponent(AgilitySW))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel23)
+                        .addGap(18, 18, 18)
+                        .addComponent(ObjectSW)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel15)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(AbilitySW))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(NameSW)))
+                .addGap(0, 178, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24)
+                    .addComponent(NameSW))
+                .addGap(3, 3, 3)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel23)
                     .addComponent(ObjectSW))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(AbilitySW))
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(AbilitySW)
+                    .addComponent(jLabel15))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
-                    .addComponent(StrengthSW))
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(StrengthSW)
+                    .addComponent(jLabel16))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel17)
-                    .addComponent(HPSW))
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(HPSW)
+                    .addComponent(jLabel17))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
@@ -574,7 +612,7 @@ public class Interfaz extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel9);
-        jPanel9.setBounds(240, 440, 270, 110);
+        jPanel9.setBounds(240, 430, 270, 130);
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
@@ -632,6 +670,14 @@ public class Interfaz extends javax.swing.JFrame {
         AgilityST.setForeground(new java.awt.Color(255, 255, 255));
         AgilityST.setText("-");
 
+        jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel25.setText("Nombre:");
+
+        NameST.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        NameST.setForeground(new java.awt.Color(255, 255, 255));
+        NameST.setText("-");
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
@@ -639,14 +685,6 @@ public class Interfaz extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addComponent(jLabel18)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ObjectST))
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addComponent(jLabel19)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(AbilityST))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addComponent(jLabel20)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -658,12 +696,29 @@ public class Interfaz extends javax.swing.JFrame {
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addComponent(jLabel22)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(AgilityST)))
+                        .addComponent(AgilityST))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addComponent(jLabel19)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(AbilityST))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addComponent(jLabel18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ObjectST))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addComponent(jLabel25)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(NameST)))
                 .addContainerGap(178, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel25)
+                    .addComponent(NameST))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18)
                     .addComponent(ObjectST))
@@ -679,7 +734,7 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel21)
                     .addComponent(HPST))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel22)
                     .addComponent(AgilityST))
@@ -687,7 +742,7 @@ public class Interfaz extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel8);
-        jPanel8.setBounds(650, 430, 270, 110);
+        jPanel8.setBounds(650, 420, 270, 140);
 
         jPanel13.setBackground(new java.awt.Color(0, 0, 0, 95));
 
@@ -721,13 +776,13 @@ public class Interfaz extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel13);
-        jPanel13.setBounds(650, 550, 310, 40);
+        jPanel13.setBounds(650, 570, 310, 40);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Velocidad (s)");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(650, 600, 93, 17);
+        jLabel2.setBounds(650, 610, 93, 17);
 
         Velocidad.setValue(1);
         Velocidad.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -736,7 +791,7 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Velocidad);
-        Velocidad.setBounds(650, 620, 140, 23);
+        Velocidad.setBounds(650, 630, 140, 23);
 
         Inicio.setText("Iniciar");
         Inicio.addActionListener(new java.awt.event.ActionListener() {
@@ -745,7 +800,7 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Inicio);
-        Inicio.setBounds(800, 610, 160, 40);
+        Inicio.setBounds(800, 620, 160, 40);
 
         jPanel6.setBackground(new java.awt.Color(0, 0, 0, 90));
         jPanel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -805,7 +860,7 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Clash.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1240, 680);
+        jLabel1.setBounds(0, 10, 1240, 680);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -925,6 +980,8 @@ public class Interfaz extends javax.swing.JFrame {
     private static javax.swing.JLabel IconSW;
     private javax.swing.JButton Inicio;
     private static javax.swing.JTextArea ListaGanadores;
+    private static javax.swing.JLabel NameST;
+    private static javax.swing.JLabel NameSW;
     private javax.swing.JLabel NombreCartoon;
     private javax.swing.JLabel NombreNick;
     private static javax.swing.JLabel ObjectST;
@@ -958,6 +1015,8 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
