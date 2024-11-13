@@ -17,8 +17,8 @@ public class Global {
     
     private static String[] objetos={"Strength","LightSaber","Gun","RayGun","SpecialSuit","MindPowers","AlienWings","DarkForceBlood","PurpleLightSaber","RedLightSaber"};
   
-    private static Fans starW;
-    private static Fans starT;
+    private static Fans SW;
+    private static Fans ST;
     
     private static List ganadores=new List(); //lista de ganadores
 
@@ -65,31 +65,31 @@ public class Global {
     }
 
     /**
-     * @return the starW
+     * @return the SW
      */
-    public static Fans getStarW() {
-        return starW;
+    public static Fans getSW() {
+        return SW;
     }
 
     /**
-     * @param aStarW the starW to set
+     * @param aSW the SW to set
      */
-    public static void setStarW(Fans aStarW) {
-        starW = aStarW;
+    public static void setSW(Fans aSW) {
+        SW = aSW;
     }
 
     /**
-     * @return the starT
+     * @return the ST
      */
-    public static Fans getStarT() {
-        return starT;
+    public static Fans getST() {
+        return ST;
     }
 
     /**
-     * @param aStarT the starT to set
+     * @param aST the ST to set
      */
-    public static void setStarT(Fans aStarT) {
-        starT = aStarT;
+    public static void setST(Fans aST) {
+        ST = aST;
     }
 
     /**
@@ -105,6 +105,7 @@ public class Global {
     public static void setGanadores(List aGanadores) {
         ganadores = aGanadores;
     }
-    
+
+   
     
 }
