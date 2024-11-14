@@ -139,7 +139,7 @@ public class AICPU extends Thread{
             advantage_p2++;
         }
         
-        if(advantage_p1>advantage_p2){
+        if(advantage_p1>=advantage_p2){
             System.out.println(p1.getName()+" es el ganador");
             Interfaz.getListaGanadores().append("SW-"+p1.getId()+'\n');
             Interfaz.getIconST().setIcon(new ImageIcon(getClass().getResource("/images/StarTrek.jpg"))); // Se quita la foto del perdedor
