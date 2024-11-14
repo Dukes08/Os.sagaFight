@@ -296,8 +296,8 @@ public class Administrator extends Thread{
     }
     
     public void clearIcons(){
-        Interfaz.getIconST().setIcon(new ImageIcon(getClass().getResource("/images/Carta.jpg")));
-        Interfaz.getIconSW().setIcon(new ImageIcon(getClass().getResource("/images/Carta.jpg")));
+        Interfaz.getIconST().setIcon(new ImageIcon(getClass().getResource("/images/StarTrek.jpg")));
+        Interfaz.getIconSW().setIcon(new ImageIcon(getClass().getResource("/images/Star Wars.jpg")));
     }
     
     public void checkEmpty(){

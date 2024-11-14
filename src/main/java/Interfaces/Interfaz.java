@@ -355,13 +355,13 @@ public class Interfaz extends javax.swing.JFrame {
         marcadorSW.setForeground(new java.awt.Color(255, 255, 255));
         marcadorSW.setText("0");
         getContentPane().add(marcadorSW);
-        marcadorSW.setBounds(460, 30, 16, 30);
+        marcadorSW.setBounds(426, 30, 50, 30);
 
         marcadorST.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         marcadorST.setForeground(new java.awt.Color(255, 255, 255));
         marcadorST.setText("0");
         getContentPane().add(marcadorST);
-        marcadorST.setBounds(730, 30, 16, 30);
+        marcadorST.setBounds(696, 30, 50, 30);
 
         NombreStarTrek.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         NombreStarTrek.setForeground(new java.awt.Color(255, 255, 255));
@@ -422,37 +422,41 @@ public class Interfaz extends javax.swing.JFrame {
         jPanel5.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 190, 110));
 
         getContentPane().add(jPanel5);
-        jPanel5.setBounds(930, 20, 210, 590);
+        jPanel5.setBounds(990, 30, 210, 590);
 
-        IconST.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Carta.jpg"))); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0, 90));
+
+        IconST.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/StarTrek.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(IconST, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(15, 15, 15)
+                .addComponent(IconST)
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(IconST, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(IconST, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(670, 80, 250, 330);
+        jPanel1.setBounds(670, 80, 260, 330);
 
-        IconSW.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Carta.jpg"))); // NOI18N
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0, 90));
+
+        IconSW.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Star Wars.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(IconSW, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(17, 17, 17)
+                .addComponent(IconSW)
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -460,7 +464,7 @@ public class Interfaz extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(240, 80, 250, 330);
+        jPanel2.setBounds(240, 80, 220, 330);
 
         jPanel12.setBackground(new java.awt.Color(0, 0, 0, 95));
 
@@ -478,10 +482,11 @@ public class Interfaz extends javax.swing.JFrame {
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addGap(31, 31, 31)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Resultado_Combate)
-                    .addComponent(Resultado_Combate1))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addComponent(Resultado_Combate1)
+                .addContainerGap(34, Short.MAX_VALUE))
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addComponent(Resultado_Combate)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -761,9 +766,9 @@ public class Interfaz extends javax.swing.JFrame {
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(Resultado_Combate2)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(IA_State)
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
