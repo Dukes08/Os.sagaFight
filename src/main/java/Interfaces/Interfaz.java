@@ -349,25 +349,25 @@ public class Interfaz extends javax.swing.JFrame {
         NombreStarWars.setForeground(new java.awt.Color(255, 255, 255));
         NombreStarWars.setText("Star Wars");
         getContentPane().add(NombreStarWars);
-        NombreStarWars.setBounds(240, 30, 118, 30);
+        NombreStarWars.setBounds(260, 30, 118, 30);
 
         marcadorSW.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         marcadorSW.setForeground(new java.awt.Color(255, 255, 255));
         marcadorSW.setText("0");
         getContentPane().add(marcadorSW);
-        marcadorSW.setBounds(426, 30, 50, 30);
+        marcadorSW.setBounds(400, 30, 50, 30);
 
         marcadorST.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         marcadorST.setForeground(new java.awt.Color(255, 255, 255));
         marcadorST.setText("0");
         getContentPane().add(marcadorST);
-        marcadorST.setBounds(696, 30, 50, 30);
+        marcadorST.setBounds(850, 40, 50, 30);
 
         NombreStarTrek.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         NombreStarTrek.setForeground(new java.awt.Color(255, 255, 255));
         NombreStarTrek.setText("Star Trek");
         getContentPane().add(NombreStarTrek);
-        NombreStarTrek.setBounds(790, 30, 114, 30);
+        NombreStarTrek.setBounds(710, 40, 114, 30);
 
         jPanel5.setBackground(new java.awt.Color(0, 0, 0, 90));
         jPanel5.setForeground(new java.awt.Color(255, 255, 255));

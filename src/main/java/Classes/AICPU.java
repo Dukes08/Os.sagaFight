@@ -118,24 +118,30 @@ public class AICPU extends Thread{
                 
         if(p1.getAgility()>p2.getAgility()){
             advantage_p1++;
-        }else {
+        }else if(p1.getAgility()>p2.getAgility()){
             advantage_p2++;
         }
                 
-        if(p1.getStrength()>=p2.getStrength()){
+        if(p1.getStrength()>p2.getStrength()){
             advantage_p1++;
-        }else {
+        }else if(p1.getStrength()<p2.getStrength()){
             advantage_p2++;
         }
                 
         if(p1.getHability()>p2.getHability()) {
             advantage_p1++;
-        }else {
+        }else if(p1.getHability()<p2.getHability()){
             advantage_p2++;
         }
-        if(p1.getHp()>=p2.getHp()) {
+        if(p1.getHp()>p2.getHp()) {
             advantage_p1++;
-        }else {
+        }else if(p1.getHp()<p2.getHp()){
+            advantage_p2++;
+        }
+        
+        if(p1.getAgility()+p1.getStrength()+p1.getHp()+p1.getHability()>p2.getAgility()+p2.getStrength()+p2.getHp()+p2.getHability()){
+            advantage_p1++;
+        }else if(p1.getAgility()+p1.getStrength()+p1.getHp()+p1.getHability()<p2.getAgility()+p2.getStrength()+p2.getHp()+p2.getHability()){
             advantage_p2++;
         }
         
