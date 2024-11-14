@@ -145,7 +145,7 @@ public class AICPU extends Thread{
             advantage_p2++;
         }
         
-        if(advantage_p1>=advantage_p2){
+        if(advantage_p1>advantage_p2){
             System.out.println(p1.getName()+" es el ganador");
             Interfaz.getListaGanadores().append("SW-"+p1.getId()+'\n');
             Interfaz.getIconST().setIcon(new ImageIcon(getClass().getResource("/images/StarTrek.jpg"))); // Se quita la foto del perdedor
@@ -153,7 +153,7 @@ public class AICPU extends Thread{
             Interfaz.getMarcadorSW().setText(Integer.toString(this.SWWins));
             
             return p1;
-        }else{
+        }else if (advantage_p1<advantage_p2){
             System.out.println(p2.getName()+" es el ganador");
             Interfaz.getListaGanadores().append("ST-"+p2.getId()+'\n');
             Interfaz.getIconSW().setIcon(new ImageIcon(getClass().getResource("/images/Star Wars.jpg"))); // Se quita la foto del Perdedor
@@ -161,6 +161,25 @@ public class AICPU extends Thread{
             Interfaz.getMarcadorST().setText(Integer.toString(this.STWins));
             
             return p2;
+        }else{
+            int winnerNum= (int) (Math.random()*100) ;
+            if (winnerNum<50){
+                System.out.println(p1.getName()+" es el ganador");
+                Interfaz.getListaGanadores().append("SW-"+p1.getId()+'\n');
+                Interfaz.getIconST().setIcon(new ImageIcon(getClass().getResource("/images/StarTrek.jpg"))); // Se quita la foto del perdedor
+                this.SWWins ++;
+                Interfaz.getMarcadorSW().setText(Integer.toString(this.SWWins));
+            
+                return p1;
+            }else{
+                System.out.println(p2.getName()+" es el ganador");
+                Interfaz.getListaGanadores().append("ST-"+p2.getId()+'\n');
+                Interfaz.getIconSW().setIcon(new ImageIcon(getClass().getResource("/images/Star Wars.jpg"))); // Se quita la foto del Perdedor
+                this.STWins ++;
+                Interfaz.getMarcadorST().setText(Integer.toString(this.STWins));
+            
+                return p2;
+            }
         }
     }
 }
